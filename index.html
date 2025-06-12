@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EXXE.LAB: Belajar Trading Crypto dan Artificial Intelligence</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #031500;
+            color: #FFFFFF;
+        }
+        .gradient-text {
+            background: linear-gradient(90deg, #7DC200, #5A8F00);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        .gradient-bg {
+            background: linear-gradient(135deg, #0A2000, #143000);
+        }
+        .glow {
+            filter: drop-shadow(0 0 10px rgba(125, 194, 0, 0.5));
+        }
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(125, 194, 0, 0.3);
+        }
+    </style>
+</head>
+<body class="antialiased">
+    <!-- Navigation -->
+    <nav class="bg-green-900 bg-opacity-80 backdrop-blur-md fixed w-full z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center">
+                    <a href="#beranda" class="flex-shrink-0">
+                        <img src="https://i.imgur.com/1BbUKMG.png" alt="EXXE.LAB" class="h-16">
+                    </a>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-4">
+                        <a href="#beranda" class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Beranda</a>
+                        <a href="#programs" class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Program</a>
+                        <a href="#testimonials" class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Testimoni</a>
+                        <a href="#pricing" class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Harga</a>
+                        <a href="#faq" class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">FAQ</a>
+                    </div>
+                </div>
+                <div class="hidden md:block">
+                    <a href="#pricing" class="ml-8 whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-green-600 hover:bg-green-700" style="background-color: #7DC200">
+                        Daftar Sekarang
+                    </a>
+                </div>
+                <div class="-mr-2 flex md:hidden">
+                    <button type="button" class="bg-gray-900 inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-800 focus:outline-none" aria-controls="mobile-menu" aria-expanded="false">
+                        <span class="sr-only">Open main menu</span>
+                        <i class="fas fa-bars h-6 w-6"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile menu -->
+        <div class="md:hidden hidden" id="mobile-menu">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#beranda" class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Beranda</a>
+                <a href="#programs" class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Program</a>
+                <a href="#testimonials" class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Testimoni</a>
+                <a href="#pricing" class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Harga</a>
+                <a href="#faq" class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">FAQ</a>
+                <a href="#pricing" class="block px-3 py-2 rounded-md text-base font-medium text-white bg-green-600 hover:bg-green-700">
+                    Daftar Sekarang
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="beranda" class="pt-32 pb-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <div>
+                <div class="flex items-center mb-4 bg-gray-800 rounded-full py-1 px-4 w-max">
+                    <div class="h-2 w-2 rounded-full bg-green-500 mr-2 animate-pulse"></div>
+                    <span class="text-sm font-medium gradient-text">Trade ideas rutin setiap harinya</span>
+                </div>
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
+                    Strategi Real yang Dipakai Trader untuk <span class="gradient-text">2x Portfolio</span> Mereka
+                </h1>
+                <p class="text-lg text-gray-300 mb-8">
+                    Bergabunglah dengan member yang sudah berhasil meningkatkan pengetahuan dan keuntungan mereka di dunia crypto dan AI bersama EXXE.LAB.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="#pricing" class="bg-green-600 hover:bg-green-700 text-white font-medium py-3 px-8 rounded-lg transition duration-300 transform hover:-translate-y-1 shadow-lg" style="background-color: #7DC200">
+                        Daftar Sekarang
+                    </a>
+                    <a href="#programs" class="border border-green-600 text-green-400 hover:bg-green-900/30 font-medium py-3 px-8 rounded-lg transition duration-300 flex items-center justify-center" style="border-color: #7DC200; color: #7DC200">
+                        <i class="fas fa-play-circle mr-2"></i> Lihat Program
+                    </a>
+                </div>
+            </div>
+            <div class="relative">
+                <img src="https://i.imgur.com/uX3NTvN.png" alt="Crypto and AI Education">
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="py-16 bg-gradient-to-r from-gray-900 to-green-900 border-t border-b border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <div class="text-center">
+                    <div class="text-4xl font-bold gradient-text mb-2">1000+</div>
+                    <div class="text-gray-300">Modul Pembelajaran</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-4xl font-bold gradient-text mb-2">80%+</div>
+                    <div class="text-gray-300">Akurasi Sinyal</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-4xl font-bold gradient-text mb-2">24/7</div>
+                    <div class="text-gray-300">Trade idea</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-4xl font-bold gradient-text mb-2">24/7</div>
+                    <div class="text-gray-300">Dukungan Komunitas</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4">Apa Kata <span class="gradient-text">Member Kami</span></h2>
+            <p class="text-lg text-gray-300 max-w-3xl mx-auto">
+                Jangan percaya kami, lihat sendiri testimoni mereka yang sudah berhasil mendapatkan keuntungan.
+            </p>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+            <div class="bg-gray-800/50 rounded-xl p-6 border border-gray-700 card-hover">
+                <div class="flex items-center mb-4">
+                </div>
+                <p class="text-gray-300 mb-4">
+                    "Bergabung dengan EXXE.LAB adalah keputusan terbaik saya tahun ini. Saya mempelajari banyak sekali hal baru."
+                </p>
+                <div class="text-green-400 font-medium">- Squal</div>
+                <div class="text-gray-500 text-sm">Member sejak 2024</div>
+            </div>
+            <div class="bg-gray-800/50 rounded-xl p-6 border border-gray-700 card-hover">
+                <div class="flex items-center mb-4">
+                </div>
+                <p class="text-gray-300 mb-4">
+                    "Modul pembelajaran AI sangat lengkap dari basic sampai advanced. Akhirnya saya bisa membuat machine learning sendiri!"
+                </p>
+                <div class="text-green-400 font-medium">- Farrel</div>
+                <div class="text-gray-500 text-sm">Member sejak 2024</div>
+            </div>
+            <div class="bg-gray-800/50 rounded-xl p-6 border border-gray-700 card-hover">
+                <div class="flex items-center mb-4">
+                </div>
+                <p class="text-gray-300 mb-4">
+                    "Sinyal trading dari EXXE.LAB sangat akurat. Saya balik modal hanya dalam beberapa minggu!"
+                </p>
+                <div class="text-green-400 font-medium">- Jhoan</div>
+                <div class="text-gray-500 text-sm">Member sejak 2024</div>
+            </div>
+        </div>
+
+        <div class="flex justify-center">
+            <a href="https://discord.gg/bESKcE4g" target="_blank" class="bg-indigo-600 hover:bg-indigo-700 text-white font-medium py-3 px-8 rounded-lg transition duration-300 inline-flex items-center">
+                <i class="fab fa-discord mr-2"></i> Gabung Komunitas Discord Kami
+            </a>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="py-20 bg-gradient-to-b from-gray-900/50 to-green-900/20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Kenapa <span class="gradient-text">EXXE.LAB</span></h2>
+                <p class="text-lg text-gray-300 max-w-3xl mx-auto">
+                    Kami menawarkan solusi lengkap untuk mempelajari crypto dan AI dari dasar hingga mahir.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-green-800/30 rounded-xl p-8 border border-gray-700 card-hover">
+                    <div class="w-14 h-14 rounded-xl bg-green-900/30 flex items-center justify-center mb-6">
+                        <span class="text-2xl font-bold gradient-text">1</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Modul Pembelajaran Lengkap</h3>
+                    <p class="text-gray-300">
+                        Kalian akan dibimbing dari 0 sampai mahir trading crypto dengan modul pembelajaran yang di-update setiap minggu.
+                    </p>
+                </div>
+                <div class="bg-green-800/30 rounded-xl p-8 border border-gray-700 card-hover">
+                    <div class="w-14 h-14 rounded-xl bg-green-900/30 flex items-center justify-center mb-6">
+                        <span class="text-2xl font-bold gradient-text">2</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Komunitas Eksklusif</h3>
+                    <p class="text-gray-300">
+                        Event ekslusif bersama komunitas dengan tujuan yang sama. Sukses tidak bisa dicapai sendirian, kamu butuh support system.
+                    </p>
+                </div>
+                <div class="bg-green-800/30 rounded-xl p-8 border border-gray-700 card-hover">
+                    <div class="w-14 h-14 rounded-xl bg-green-900/30 flex items-center justify-center mb-6">
+                        <span class="text-2xl font-bold gradient-text">3</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Sinyal & Analisis Premium</h3>
+                    <p class="text-gray-300">
+                        Akses ke sinyal trading dengan akurasi tinggi dan analisis mendalam yang membantu kamu mengambil keputusan lebih baik.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Programs Section -->
+    <section id="programs" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4">Program <span class="gradient-text">Kami</span></h2>
+            <p class="text-lg text-gray-300 max-w-3xl mx-auto">
+                Belajar crypto dan AI secara terstruktur dari dasar hingga mahir dengan kurikulum terlengkap.
+            </p>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="bg-gray-800/50 rounded-xl overflow-hidden border border-gray-700 card-hover">
+                <div class="p-6 border-b border-gray-700 bg-gradient-to-r from-lime-900/30 to-green-900/30">
+                    <h3 class="text-xl font-bold mb-2">Crypto Investing</h3>
+                    <p class="text-gray-300 text-sm">
+                        Mulai dari $30/bulan
+                    </p>
+                </div>
+                <div class="p-6">
+                    <p class="text-gray-300 mb-4">
+                        Panduan lengkap dari 0 sampai bisa menganalisa aset crypto yang akan terbang, memahami siklus pasar, mengatur portofolio optimal, dan tools analisa terbaik.
+                    </p>
+                    <ul class="space-y-2 mb-6">
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                            <span class="text-gray-300">Modul Pembelajaran</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                            <span class="text-gray-300">Crypto Research</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                            <span class="text-gray-300">Bitcoin & Ethereum Fundamental</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                            <span class="text-gray-300">Coin Research</span>
+                        </li>
+                    </ul>
+                    <a href="#pricing" class="bg-green-600 hover:bg-green-700 text-white font-medium py-2 px-6 rounded-lg transition duration-300 w-full block text-center" style="background-color: #7DC200">
+                        Daftar Sekarang
+                    </a>
+                </div>
+            </div>
+            
+            <div class="bg-gray-800/50 rounded-xl overflow-hidden border border-green-600 card-hover transform hover:scale-[1.02] transition duration-300" style="box-shadow: 0 0 20px rgba(125, 194, 0, 0.3);">
+                <div class="p-6 border-b border-green-700 bg-gradient-to-r from-lime-900/50 to-green-900/50">
+                    <div class="flex justify-between items-center">
+                        <h3 class="text-xl font-bold mb-2">Crypto Trading</h3>
+                        <span class="bg-green-600 text-white text-xs font-medium px-2 py-1 rounded-full" style="background-color: #7DC200">
+                            Populer
+                        </span>
+                    </div>
+                    <p class="text-gray-300 text-sm">
+                        Mulai dari $30/bulan
+                    </p>
+                </div>
+                <div class="p-6">
+                    <p class="text-gray-300 mb-4">
+                        Belajar menghasilkan income harian dengan memanfaatkan fluktuasi pasar crypto dari dasar trading, analisa teknikal, risk management sampai psikologi trading.
+                    </p>
+                    <ul class="space-y-2 mb-6">
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                            <span class="text-gray-300">Modul Pembelajaran</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                            <span class="text-gray-300">Technical Analysis</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                            <span class="text-gray-300">Risk Management</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                            <span class="text-gray-300">Behavioural Market</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                            <span class="text-gray-300">Trade ideas</span>
+                        </li>
+                    </ul>
+                    <a href="#pricing" class="bg-green-600 hover:bg-green-700 text-white font-medium py-2 px-6 rounded-lg transition duration-300 w-full block text-center" style="background-color: #7DC200">
+                        Daftar Sekarang
+                    </a>
+                </div>
+            </div>
+            
+            <div class="bg-gray-800/50 rounded-xl overflow-hidden border border-gray-700 card-hover">
+                <div class="p-6 border-b border-gray-700 bg-gradient-to-r from-lime-900/30 to-green-900/30">
+                    <h3 class="text-xl font-bold mb-2">Artificial Intelligence Development</h3>
+                    <p class="text-gray-300 text-sm">
+                        Mulai dari $30/bulan
+                    </p>
+                </div>
+                <div class="p-6">
+                    <p class="text-gray-300 mb-4">
+                        Belajar fundamental Artificial Intelligence dan development sampai bisa program machine learning sendiri.
+                    </p>
+                    <ul class="space-y-2 mb-6">
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                            <span class="text-gray-300">Modul Pembelajaran</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                            <span class="text-gray-300">Pengenalan Ilmu komputer</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                            <span class="text-gray-300">Artificial Intelligence Basics</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                            <span class="text-gray-300">Machine Learning Development</span>
+                        </li>
+                    </ul>
+                    <a href="#pricing" class="bg-green-600 hover:bg-green-700 text-white font-medium py-2 px-6 rounded-lg transition duration-300 w-full block text-center" style="background-color: #7DC200">
+                        Daftar Sekarang
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-20 bg-gradient-to-b from-green-900/20 to-gray-900/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Bonus <span class="gradient-text">Eksklusif</span> Untuk Member</h2>
+                <p class="text-lg text-gray-300 max-w-3xl mx-auto">
+                    Manfaat tambahan yang akan membantu kesuksesan Anda.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-gray-800/30 rounded-xl p-8 flex flex-col md:flex-row gap-6 border border-gray-700 card-hover">
+                    <div class="flex-shrink-0">
+                        <div class="w-20 h-20 rounded-xl bg-green-900/30 flex items-center justify-center">
+                            <i class="fas fa-signal text-3xl text-green-400"></i>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold mb-3">Sinyal Crypto Harian</h3>
+                        <p class="text-gray-300">
+                            Anda tidak perlu pusing screening jutaan coin di market. Cukup ikuti sinyal dengan resiko terukur dari tim kami dengan akurasi tinggi.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="bg-gray-800/30 rounded-xl p-8 flex flex-col md:flex-row gap-6 border border-gray-700 card-hover">
+                    <div class="flex-shrink-0">
+                        <div class="w-20 h-20 rounded-xl bg-green-900/30 flex items-center justify-center">
+                            <i class="fas fa-chart-line text-3xl text-green-400"></i>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold mb-3">EXXE Research & Coin Picks</h3>
+                        <p class="text-gray-300">
+                            Akses riset internal dan rekomendasi coin yang secara konsisten mengalahkan market. Screening sudah dilakukan oleh tim ahli kami.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="bg-gray-800/30 rounded-xl p-8 flex flex-col md:flex-row gap-6 border border-gray-700 card-hover">
+                    <div class="flex-shrink-0">
+                        <div class="w-20 h-20 rounded-xl bg-green-900/30 flex items-center justify-center">
+                            <i class="fas fa-users text-3xl text-green-400"></i>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold mb-3">Modul Pembelajaran Artificial Intelligence</h3>
+                        <p class="text-gray-300">
+                            Anda tidak perlu lagi untuk belajar AI secara berhamburan, cukup baca E-book dan nonton modul kami.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="bg-gray-800/30 rounded-xl p-8 flex flex-col md:flex-row gap-6 border border-gray-700 card-hover">
+                    <div class="flex-shrink-0">
+                        <div class="w-20 h-20 rounded-xl bg-green-900/30 flex items-center justify-center">
+                            <i class="fas fa-mobile-alt text-3xl text-green-400"></i>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold mb-3">EXXE Terminal App</h3>
+                        <p class="text-gray-300">
+                            Aplikasi eksklusif untuk akses cepat berita, analisis, modul pembelajaran dan tools trading.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4">Pilihan <span class="gradient-text">Harga</span></h2>
+            <p class="text-lg text-gray-300 max-w-3xl mx-auto">
+                Investasikan pengetahuan Anda hari ini untuk keuntungan jangka panjang.
+            </p>
+        </div>
+        
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            <div class="bg-gray-800/30 rounded-xl p-8 border border-gray-700 card-hover">
+                <div class="mb-6">
+                    <h3 class="text-xl font-bold mb-2">1 Bulan</h3>
+                    <div class="flex items-end mb-2">
+                        <span class="text-4xl font-bold gradient-text">$30</span>
+                        <span class="text-gray-400 ml-2">/bulan</span>
+                    </div>
+                    <p class="text-sm text-gray-400">Pembayaran 1 bulan penuh</p>
+                </div>
+                <div class="mb-8">
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span class="text-gray-300">Akses 1 Bulan Penuh</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span class="text-gray-300">Semua Modul Pembelajaran termasuk AI</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span class="text-gray-300">Sinyal Trading Harian</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span class="text-gray-300">Komunitas Discord</span>
+                        </li>
+                    </ul>
+                </div>
+                <a href="https://forms.gle/WbAPTz9n1fj7CepJ7" target="_blank" class="bg-gray-700 hover:bg-gray-600 text-white font-medium py-3 px-6 rounded-lg transition duration-300 w-full block text-center">
+                    Pilih Paket Ini
+                </a>
+            </div>
+            
+            <div class="bg-gray-800/30 rounded-xl p-8 border-2 border-green-600 card-hover transform hover:scale-[1.02]" style="box-shadow: 0 0 30px rgba(99, 102, 241, 0.3);">
+                <div class="absolute top-0 right-0 bg-green-600 text-white text-xs font-bold px-4 py-1 rounded-bl-lg rounded-tr-lg" style="background-color: #7DC200">
+                    BEST VALUE
+                </div>
+                <div class="mb-6">
+                    <h3 class="text-xl font-bold mb-2">12 Bulan</h3>
+                    <div class="flex items-end mb-2">
+                        <span class="text-4xl font-bold gradient-text">$299</span>
+                        <span class="text-gray-400 ml-2">/tahun</span>
+                    </div>
+                    <div class="flex items-center">
+                        <span class="line-through text-gray-500">$360</span>
+                        <span class="ml-2 bg-green-900/30 text-green-400 text-xs px-2 py-0.5 rounded-full">Hemat 17%</span>
+                    </div>
+                    <p class="text-sm text-gray-400">Cukup $0,82/hari</p>
+                </div>
+                <div class="mb-8">
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span class="text-gray-300">Akses 12 Bulan Penuh</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span class="text-gray-300">Semua Modul Pembelajaran</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span class="text-gray-300">Sinyal Trading Harian</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span class="text-gray-300">Komunitas Discord</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span class="text-gray-300">Pembelajaran eksklusif AI</span>
+                        </li>
+                    </ul>
+                </div>
+                <a href="https://forms.gle/WbAPTz9n1fj7CepJ7" target="_blank" class="bg-green-600 hover:bg-green-700 text-white font-medium py-3 px-6 rounded-lg transition duration-300 w-full block text-center" style="background-color: #7DC200">
+                    Pilih Paket Ini
+                </a>
+            </div>
+            
+            <div class="bg-gray-800/30 rounded-xl p-8 border border-gray-700 card-hover">
+                <div class="mb-6">
+                    <h3 class="text-xl font-bold mb-2">6 Bulan</h3>
+                    <div class="flex items-end mb-2">
+                        <span class="text-4xl font-bold gradient-text">$165</span>
+                        <span class="text-gray-400 ml-2">/6 bulan</span>
+                    </div>
+                    <div class="flex items-center">
+                        <span class="line-through text-gray-500">$180</span>
+                        <span class="ml-2 bg-green-900/30 text-green-400 text-xs px-2 py-0.5 rounded-full">Hemat 10%</span>
+                    </div>
+                    <p class="text-sm text-gray-400">Cukup $0,90/hari</p>
+                </div>
+                <div class="mb-8">
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span class="text-gray-300">Akses 6 Bulan Penuh</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span class="text-gray-300">Semua Modul Pembelajaran termasuk AI</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span class="text-gray-300">Sinyal Trading Harian</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span class="text-gray-300">Komunitas Discord</span>
+                        </li>
+                    </ul>
+                </div>
+                <a href="https://forms.gle/WbAPTz9n1fj7CepJ7" target="_blank" class="bg-gray-700 hover:bg-gray-600 text-white font-medium py-3 px-6 rounded-lg transition duration-300 w-full block text-center">
+                    Pilih Paket Ini
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="py-20 bg-gradient-to-b from-gray-900/50 to-green-900/20">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Pertanyaan yang <span class="gradient-text">Sering Ditanyakan</span></h2>
+                <p class="text-lg text-gray-300 max-w-3xl mx-auto">
+                    Temukan jawaban atas pertanyaan umum tentang EXXE.LAB.
+                </p>
+            </div>
+            
+            <div class="space-y-4">
+                <div class="bg-gray-800/30 rounded-xl p-6 border border-gray-700">
+                    <button class="flex justify-between items-center w-full text-left">
+                        <h3 class="text-lg font-medium text-white">Apakah profit di crypto bisa dipastikan?</h3>
+                        <i class="fas fa-chevron-down text-green-400 transition-transform duration-300"></i>
+                    </button>
+                    <div class="mt-3 text-gray-300 hidden">
+                        <p>Layaknya semua hal di dunia tidak ada yang pasti. Semakin tinggi potensi imbal hasil sebuah asset maka resikonya akan semakin tinggi juga. Tetapi dengan belajar, kalian pasti akan bisa meminimalisir kerugian.</p>
+                    </div>
+                </div>
+                
+                <div class="bg-gray-800/30 rounded-xl p-6 border border-gray-700">
+                    <button class="flex justify-between items-center w-full text-left">
+                        <h3 class="text-lg font-medium text-white">Apakah perlu modal besar untuk investasi crypto?</h3>
+                        <i class="fas fa-chevron-down text-green-400 transition-transform duration-300"></i>
+                    </button>
+                    <div class="mt-3 text-gray-300 hidden">
+                        <p>Tidak juga, kalian bisa mulai dengan modal sekecil apapun. Kami bahkan menyarankan untuk pemula mulai dengan 5-10% dari total asset.</p>
+                    </div>
+                </div>
+                
+                <div class="bg-gray-800/30 rounded-xl p-6 border border-gray-700">
+                    <button class="flex justify-between items-center w-full text-left">
+                        <h3 class="text-lg font-medium text-white">Apa belajar AI itu sulit?</h3>
+                        <i class="fas fa-chevron-down text-green-400 transition-transform duration-300"></i>
+                    </button>
+                    <div class="mt-3 text-gray-300 hidden">
+                        <p>Tentu. Tetapi, jika memang memiliki niat yang kuat untuk belajar, maka hal sesusah apapun pasti bisa di pahami</p>
+                    </div>
+                </div>
+                
+                <div class="bg-gray-800/30 rounded-xl p-6 border border-gray-700">
+                    <button class="flex justify-between items-center w-full text-left">
+                        <h3 class="text-lg font-medium text-white">Saya masih berumur kepala 1, pas tidak untuk belajar?</h3>
+                        <i class="fas fa-chevron-down text-green-400 transition-transform duration-300"></i>
+                    </button>
+                    <div class="mt-3 text-gray-300 hidden">
+                        <p>Umur itu tidak pernah menjadi masalah, karena kita tau teman terbaik dari mulai lebih awal adalah compounding.</p>
+                    </div>
+                </div>
+                
+                <div class="bg-gray-800/30 rounded-xl p-6 border border-gray-700">
+                    <button class="flex justify-between items-center w-full text-left">
+                        <h3 class="text-lg font-medium text-white">Apa saya akan dapat support jika gagal?</h3>
+                        <i class="fas fa-chevron-down text-green-400 transition-transform duration-300"></i>
+                    </button>
+                    <div class="mt-3 text-gray-300 hidden">
+                        <p>Komunitas yang akan kami bangun disini akan salalu memberi kalian support terutama saat anda mengalami kesulitan.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-gray-900/40 to-green-900/40">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">Siap Mengubah Hidup Anda dengan <span class="gradient-text">Crypto dan AI?</span></h2>
+            <p class="text-lg text-gray-300 mb-8">
+                Bergabunglah dengan member yang sudah mendapatkan keuntungan dari crypto dan AI bersama EXXE.LAB.
+            </p>
+            <a href="#pricing" class="bg-green-600 hover:bg-green-700 text-white font-medium py-3 px-8 rounded-lg transition duration-300 inline-flex items-center mx-2 mb-4" style="background-color: #7DC200">
+                Daftar Sekarang
+            </a>
+            <a href="#programs" class="border border-green-600 text-green-400 hover:bg-green-900/30 font-medium py-3 px-8 rounded-lg transition duration-300 inline-flex items-center mx-2 mb-4" style="border-color: #7DC200; color: #7DC200">
+                <i class="fas fa-info-circle mr-2"></i> Pelajari Lebih Lanjut
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-green-900 border-t border-green-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="md:col-span-2">
+                    <img src="https://i.imgur.com/1BbUKMG.png" alt="EXXE.LAB" class="h-16 mb-4">
+                    <p class="text-gray-400 mb-4">
+                        Platform pembelajaran cryptocurrency dan AI terbaik di Indonesia yang membantu orang untuk menguasai crypto dan AI.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="https://www.instagram.com/exxe.lab_official/" target="_blank" class="text-gray-400 hover:text-white">
+                            <i class="fab fa-instagram text-xl"></i>
+                        </a>
+                        <a href="https://x.com/Insider_Learner" target="_blank" class="text-gray-400 hover:text-white">
+                            <i class="fab fa-twitter text-xl"></i>
+                        </a>
+                        <a href="https://www.tiktok.com/@exxe.lab_official?_t=ZS-8x5g2PokswU&_r=1" target="_blank" class="text-gray-400 hover:text-white">
+                            <i class="fab fa-tiktok text-xl"></i>
+                        </a>
+                        <a href="https://discord.gg/bESKcE4g" target="_blank" class="text-gray-400 hover:text-white">
+                            <i class="fab fa-discord text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-white font-medium mb-4">Tautan Cepat</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#beranda" class="text-gray-400 hover:text-white">Beranda</a></li>
+                        <li><a href="#programs" class="text-gray-400 hover:text-white">Program</a></li>
+                        <li><a href="#testimonials" class="text-gray-400 hover:text-white">Testimoni</a></li>
+                        <li><a href="#pricing" class="text-gray-400 hover:text-white">Harga</a></li>
+                        <li><a href="#faq" class="text-gray-400 hover:text-white">FAQ</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-white font-medium mb-4">Kontak</h3>
+                    <ul class="space-y-2">
+                        <li class="flex items-start text-gray-400">
+                            <i class="fas fa-envelope mt-1 mr-2"></i>
+                            <span>exxestudios1@gmail.com</span>
+                        </li>
+                        <li class="flex items-start text-gray-400">
+                            <i class="fab fa-whatsapp mt-1 mr-2"></i>
+                            <a href="https://wa.me/+6282155095289" target="_blank" class="hover:text-white">+62 821-5509-5289</a>
+                        </li>
+                        <li class="flex items-start text-gray-400">
+                            <i class="fas fa-map-marker-alt mt-1 mr-2"></i>
+                            <span>Indonesia</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 text-sm mb-4 md:mb-0">
+                    &copy; EXXE.LAB. All rights reserved.
+                </p>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-white text-sm">Terms of Service</a>
+                    <a href="#" class="text-gray-400 hover:text-white text-sm">Privacy Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.querySelector('[aria-controls="mobile-menu"]').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            if (menu.classList.contains('hidden')) {
+                menu.classList.remove('hidden');
+            } else {
+                menu.classList.add('hidden');
+            }
+        });
+
+        // FAQ accordion
+        const faqButtons = document.querySelectorAll('#faq button');
+        faqButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const answer = button.nextElementSibling;
+                const icon = button.querySelector('i');
+                
+                // Toggle answer visibility
+                if (answer.classList.contains('hidden')) {
+                    answer.classList.remove('hidden');
+                    icon.classList.add('rotate-180');
+                } else {
+                    answer.classList.add('hidden');
+                    icon.classList.remove('rotate-180');
+                }
+                
+                // Close other open answers
+                faqButtons.forEach(otherButton => {
+                    if (otherButton !== button) {
+                        const otherAnswer = otherButton.nextElementSibling;
+                        const otherIcon = otherButton.querySelector('i');
+                        otherAnswer.classList.add('hidden');
+                        otherIcon.classList.remove('rotate-180');
+                    }
+                });
+            });
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    const offsetTop = targetElement.offsetTop - 80;
+                    
+                    window.scrollTo({
+                        top: offsetTop,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
